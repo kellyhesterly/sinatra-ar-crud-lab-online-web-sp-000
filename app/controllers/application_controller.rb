@@ -11,6 +11,7 @@ get '/' do
   redirect to "/articles"
 end
 
+#READ
 get '/articles' do
   @articles = Article.all
   erb :index
@@ -21,6 +22,7 @@ get '/articles/id' do
   erb :show
 end
 
+#CREATE
 get '/articles/new' do
   @article = Article.new
   erb :new
