@@ -11,6 +11,10 @@ get '/' do
   redirect to "/articles"
 end
 
+get '/articles' do
+  @articles = Article.all
+  erb :index
+end
 
 
 end
