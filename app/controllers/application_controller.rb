@@ -11,6 +11,6 @@ get '/' do
   redirect to "/articles"
 end
 
-x
+
 
 end
