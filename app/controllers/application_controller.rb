@@ -11,5 +11,8 @@ get '/' do
   redirect to "/articles"
 end
 
+get '/articles' do
+  @articles = Article.all
+end
 
 end
