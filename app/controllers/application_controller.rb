@@ -28,7 +28,7 @@ end
 
 post '/articles' do
   @article = Article.create(params)
-  redirect to "/articles/#{@article.id}"
+  redirct to "/articles/#{@article.id}"
 end
 
 end
