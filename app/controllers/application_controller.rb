@@ -27,7 +27,8 @@ get '/articles/new' do
 end
 
 post '/articles' do
-  @article = Article.create(params[:id])
+  @article = Article.create(params)
+  redirect to "/articles/#{@article.id}"
 end
 
 end
