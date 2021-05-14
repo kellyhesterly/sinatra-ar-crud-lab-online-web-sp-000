@@ -9,16 +9,18 @@ class ApplicationController < Sinatra::Base
 
   get '/' do
   end
-
+#CREATE
   get '/articles/new' do
     @article = Article.new(params)
     erb :new
   end
 
   post '/articles' do
-    @article = Article.create(params)
+    @article = Article.create(params[:id])
     erb :show
   end
+
+  #READ
 
   get '/articles' do
     @articles = Article.all
