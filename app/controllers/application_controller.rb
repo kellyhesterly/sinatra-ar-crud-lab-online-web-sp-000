@@ -31,5 +31,9 @@ post '/articles' do
   redirect to "/articles/#{@article.id}"
 end
 
+get '/articles/:id/edit' do
+  @article = Article.find(params[:id])
+  erb :edcit
+end
 
 end
