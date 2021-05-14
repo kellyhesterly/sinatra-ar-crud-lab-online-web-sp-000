@@ -21,4 +21,9 @@ get '/articles/id' do
   erb :show
 end
 
+get '/articles/new' do
+  @article = Article.new
+  erb :new
+end
+
 end
