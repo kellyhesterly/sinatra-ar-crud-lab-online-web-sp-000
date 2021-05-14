@@ -17,16 +17,18 @@ get '/articles' do
   erb :index
 end
 
+get '/articles/new' do
+  @article = Article.new
+  erb :new
+end
+
+
 get '/articles/:id' do
   @article = Article.find(params[:id])
   erb :show
 end
 
 #CREATE
-get '/articles/new' do
-  @article = Article.new
-  erb :new
-end
 
 post '/articles' do
   @article = Article.create(params)
