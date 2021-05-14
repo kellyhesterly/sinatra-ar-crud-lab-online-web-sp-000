@@ -26,4 +26,8 @@ get '/articles/new' do
   erb :new
 end
 
+post '/articles' do
+  @article = Article.create(params[:id])
+end
+
 end
