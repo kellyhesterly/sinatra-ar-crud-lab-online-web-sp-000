@@ -16,5 +16,8 @@ get '/articles' do
   erb :index
 end
 
+get '/articles/id' do
+  @article = Article.find(params[:id])
+end
 
 end
