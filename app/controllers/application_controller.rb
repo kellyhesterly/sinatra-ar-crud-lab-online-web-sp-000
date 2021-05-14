@@ -16,6 +16,11 @@ get '/articles' do
   erb :index
 end
 
+get '/articles/new' do
+  @article = Article.new
+  erb :new
+end
+
 get '/articles/:id' do
   @article = Article.find(params[:id])
   erb :show
