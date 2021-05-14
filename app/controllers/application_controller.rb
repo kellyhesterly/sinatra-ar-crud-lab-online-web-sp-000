@@ -18,6 +18,7 @@ end
 
 post '/articles' do
   @article = Article.new(params)
+  redirect to "/articles/#{@article.id}"
 end
 
 get '/articles/:id' do
