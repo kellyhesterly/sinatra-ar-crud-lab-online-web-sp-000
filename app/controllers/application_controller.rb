@@ -16,7 +16,9 @@ get '/articles/new' do
   erb :new
 end
 
-
+post '/articles' do
+  @article = Article.new(params)
+end
 
 get '/articles/:id' do
   @article = Article.find(params[:id])
