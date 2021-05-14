@@ -26,4 +26,9 @@ get '/articles/:id' do
   erb :show
 end
 
+post '/articles' do
+  @article = Article.create(params)
+  redirct to "/articles/#{@article.id}"
+end
+
 end
