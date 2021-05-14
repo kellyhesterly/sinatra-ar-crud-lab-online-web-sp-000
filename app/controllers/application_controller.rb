@@ -21,13 +21,6 @@ class ApplicationController < Sinatra::Base
   end
 
   #READ
-  get '/articles' do
-    @articles = Article.all
-  end
 
-  get '/articles/:id' do
-    @article = Article.find_by(params[:id])
-    redirect to "/articles/#{@article.id}"
-  end
 
 end
