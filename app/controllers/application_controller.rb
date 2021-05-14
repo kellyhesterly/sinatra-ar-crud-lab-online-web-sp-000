@@ -33,7 +33,7 @@ end
 
 get '/articles/:id/edit' do
   @article = Article.find(params[:id])
-  erb :edcit
+  erb :edit
 end
 
 end
