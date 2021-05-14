@@ -38,6 +38,7 @@ end
 
 patch '/articles/:id' do
   @article = Article.find(params[:id])
+  @article.save
   redirect to "/articles/#{@article.id}"
 end
 
