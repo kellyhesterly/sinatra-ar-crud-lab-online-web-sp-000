@@ -37,5 +37,6 @@ get '/articles/:id/edit' do
 end
 
 patch '/articles/:id'
+end
 
 end
