@@ -36,4 +36,6 @@ get '/articles/:id/edit' do
   erb :edit
 end
 
+patch '/articles/:id'
+
 end
