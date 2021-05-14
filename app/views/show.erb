@@ -1,6 +1,6 @@
 <%= @article.title %>
 <%= @article.content %>
 
-<form method="POST" action="/articles">
+<form method="POST" action="/articles/#{@article.id}">
   <input type="submit">
 </form>
