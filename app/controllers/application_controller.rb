@@ -11,28 +11,5 @@ get '/' do
   redirect to "/articles"
 end
 
-#READ
-get '/articles' do
-  @articles = Article.all
-  erb :index
-end
-
-get '/articles/new' do
-  @article = Article.new
-  erb :new
-end
-
-
-get '/articles/:id' do
-  @article = Article.find(params[:id])
-  erb :show
-end
-
-#CREATE
-
-post '/articles' do
-  @article = Article.create(params)
-  redirect to "/articles/#{@article.id}"
-end
 
 end
